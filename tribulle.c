@@ -78,6 +78,8 @@ int main(void) {
     array_print(&arr);
     trier(&arr);
     array_print(&arr);
+
+    arr.elements[1] = -456789; // Test erreur
     
     int test_result = test_sorted(&arr);
 
