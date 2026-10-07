@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compilation') {
             steps {
-                make
+                sh 'make'
             }
         }
         stage('Test') {
             steps {
-                make test
+                sh 'make test'
             }
         }
      }

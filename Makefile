@@ -1,7 +1,7 @@
 build:
 	gcc -Wall -g tribulle.c -o tribulle
 
-test: default
+test: build
 	./tribulle
 
 clean:
