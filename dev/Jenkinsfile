@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compilation') {
+            steps {
+                make
+            }
+        }
+        stage('Test') {
+            steps {
+                make test
+            }
+        }
+     }
+}
+
