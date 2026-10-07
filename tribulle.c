@@ -1,12 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "tribulle.h"
 
-typedef struct array
-{
-    int capacity;
-    int size;
-    int* elements;
-}* Array;
 
 
 int array_init(Array arr, int intialCapacity) {
@@ -64,33 +59,3 @@ int test_sorted(const Array arr) {
     }
     return 1;
 } 
-
-int main(void) {
-    struct array arr;
-
-    array_init(&arr, 16);
-
-    for (int i = 0; i < 256; i++)
-    {
-        array_push(&arr, rand());
-    }
-    
-    array_print(&arr);
-    trier(&arr);
-    array_print(&arr);
-
-    arr.elements[1] = -456789; // Test erreur
-    
-    int test_result = test_sorted(&arr);
-
-    array_free(&arr);
-    
-    if (test_result) {
-        printf("\x1B[32mLe test est validé\x1B[0m\n");
-        
-        return 0;
-    } 
-    
-    printf("\x1B[31mLe test à échoué :/\x1B[0m\n");
-    return 1;
-}
