@@ -42,7 +42,7 @@ void trier(Array arr) {
         sorted = 1;
         for (int j = 0; j < i; j++)
         {
-            if (arr->elements[j + 1] > arr->elements[j]) {
+            if (arr->elements[j + 1] < arr->elements[j]) {
                 tmp = arr->elements[j];
                 arr->elements[j] = arr->elements[j + 1];   
                 arr->elements[j + 1] = tmp;   
