@@ -16,5 +16,5 @@ int main(int argc, char **argv) {
     printf("Tableau trié:\n");
     array_print(&arr);
 
-    array_free(&arr);
+    // array_free(&arr);
 }
